@@ -1,0 +1,171 @@
+﻿<h2 style="text-align: center; font-family: 'Comic Sans MS', sans-serif; color: #FF5733; margin-bottom: 10px;">
+    🎨 Fun Programming Tutorials for Kids! 🎉
+</h2>
+
+<p style="text-align: center; font-size: 1.2em; color: #555; margin-bottom: 10px;">
+    Explore exciting tutorials with Scratch, Blockly, and Tynker. Let's play, code, and learn!
+</p>
+
+<!-- Container for the tutorials -->
+<div class="tutorials-container">
+
+    <!-- Scratch Project -->
+    <div class="tutorial">
+        <h3>🚀 Scratch Project: Dot Programming</h3>
+        <iframe src="https://scratch.mit.edu/projects/10124551/embed" frameborder="0" scrolling="auto"></iframe>
+
+        <form method="post" action="/Progress/UpdateProgress?tutorialId=23&completed=true">
+            <button class="complete-button">✅ Finished! Mark as Complete</button>
+        </form>
+    </div>
+
+    <!-- Blockly Puzzle -->
+    <div class="tutorial">
+        <h3>🧩 Blockly Game: Puzzle</h3>
+        <iframe src="https://blockly.games/puzzle?lang=en" frameborder="0" scrolling="auto"></iframe>
+
+        <form method="post" action="/Progress/UpdateProgress?tutorialId=2&completed=true">
+            <button class="complete-button">✅ Puzzle Completed!</button>
+        </form>
+    </div>
+
+    <!-- Blockly Maze -->
+    <div class="tutorial">
+        <h3>🗺 Blockly Game: Maze</h3>
+        <iframe src="https://blockly.games/maze?lang=en" frameborder="0" scrolling="auto"></iframe>
+
+        <form method="post" action="/Progress/UpdateProgress?tutorialId=16&completed=true">
+            <button class="complete-button">✅ Maze Completed!</button>
+        </form>
+    </div>
+
+    <!-- Blockly Bird -->
+    <div class="tutorial">
+        <h3>🐦 Blockly Game: Bird</h3>
+        <iframe src="https://blockly.games/bird?lang=en" frameborder="0" scrolling="auto"></iframe>
+
+        <form method="post" action="/Progress/UpdateProgress?tutorialId=12&completed=true">
+            <button class="complete-button">✅ Bird Tutorial Completed!</button>
+        </form>
+    </div>
+
+    <!-- Blockly Pond -->
+    <div class="tutorial">
+        <h3>🦆 Blockly Game: Pond</h3>
+        <iframe src="https://blockly.games/pond-duck?lang=en" frameborder="0" scrolling="auto"></iframe>
+
+        <form method="post" action="/Progress/UpdateProgress?tutorialId=13&completed=true">
+            <button class="complete-button">✅ Pond Game Finished!</button>
+        </form>
+    </div>
+
+    <!-- Blockly Turtle -->
+    <div class="tutorial">
+        <h3>🐢 Blockly Game: Turtle</h3>
+        <iframe src="https://blockly.games/turtle?lang=en" frameborder="0" scrolling="auto"></iframe>
+
+        <form method="post" action="/Progress/UpdateProgress?tutorialId=14&completed=true">
+            <button class="complete-button">✅ Turtle Tutorial Complete!</button>
+        </form>
+    </div>
+
+    <!-- Tynker: Googly Eyes -->
+    <div class="tutorial">
+        <h3>👀 Tynker: Googly Eyes</h3>
+        <iframe src="https://www.tynker.com/ide/v3?type=diy&p=58910b50af92316a528b45ee&actionType=recommendation&actionSlug=googly-eyes" frameborder="0" scrolling="auto"></iframe>
+
+        <form method="post" action="/Progress/UpdateProgress?tutorialId=15&completed=true">
+            <button class="complete-button">✅ Googly Eyes Completed!</button>
+        </form>
+    </div>
+
+</div>
+
+<!-- CSS Styles for Layout and Playful Look -->
+<style>
+    .tutorials-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .tutorial {
+        background-color: #F9F9F9;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        max-width: 700px;
+        width: 100%; /* Full width */
+    }
+
+    h3 {
+        text-align: center;
+        font-family: 'Comic Sans MS', sans-serif;
+        color: #FF5733;
+        margin-bottom: 5px;
+    }
+
+    iframe {
+        width: 100%;
+        height: calc(100vh - 150px); /* Viewport height minus the space for header, buttons */
+        border-radius: 10px;
+    }
+
+    .complete-button {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 1em;
+        color: white;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .complete-button:hover {
+            background-color: #45a049;
+        }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tutorial {
+        margin-bottom: 10px;
+    }
+
+    /* Remove margin from the footer */
+    footer {
+        margin-top: 0;
+    }
+</style>
+
+<!-- JavaScript to trigger fullscreen -->
+<script>
+    // Function to enter fullscreen mode
+    function enterFullScreen(element) {
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) { // Firefox
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) { // Chrome, Safari, Opera
+            element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) { // IE/Edge
+            element.msRequestFullscreen();
+        }
+    }
+
+    // Attach click event to each iframe to enter fullscreen
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('iframe').forEach((iframe) => {
+            iframe.addEventListener('click', function () {
+                enterFullScreen(iframe);
+            });
+        });
+    });
+</script>
