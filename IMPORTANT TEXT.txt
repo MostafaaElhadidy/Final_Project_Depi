@@ -1,0 +1,18 @@
+Project name : Programming Tutor for Kids
+Instructor : Engineer Sayed Hawas
+Group : ALX1_SWD5_S2e
+Team members : Mostafa Marwan, Arwa Salah, Omar Adly, Abdelrahman Mohamed
+
+
+
+******Email and Password to test the project******
+User:
+
+email: mostafaelhadidy442@gmail.com
+pw: Slenderman22
+
+
+Admin:
+
+email: admin@programmingtutor.com
+pw: Admin123!

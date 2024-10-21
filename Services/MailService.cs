@@ -18,7 +18,7 @@ public class EmailSender : IEmailSender
     {
         var apiKey = _configuration["SendGrid:ApiKey"];
         var client = new SendGridClient(apiKey);
-        var from = new EmailAddress("mostafaelhadidy442@gmail.com", "ProgrammingTutor");
+        var from = new EmailAddress("mostafafire2095@gmail.com", "ProgrammingTutor");
         var to = new EmailAddress(email);
         var msg = MailHelper.CreateSingleEmail(from, to, subject, message, message);
         await client.SendEmailAsync(msg);
